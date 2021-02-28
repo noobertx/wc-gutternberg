@@ -12,7 +12,7 @@ class WPRIG_Woocommerce_Blocks {
 	protected $option_keyword = 'wprig_global_options';
 
     public function get_slug() : string {
-		return 'wprig_custom_blocks';
+		return 'wprig_wc_custom_blocks';
     }
 
 
@@ -339,7 +339,7 @@ class WPRIG_Woocommerce_Blocks {
 	 * Init dynamic blocks frontend
 	 */
 	public function init_dynamic_blocks() {
-		require_once WPRIG_DIR_PATH . 'blocks/postgrid.php';
+		require_once WPRIG_WC_DIR_PATH . 'blocks/featured-products.php';
 	}
 
 	/**
@@ -348,12 +348,12 @@ class WPRIG_Woocommerce_Blocks {
 	 * @since 1.0.0
 	 */
 	public function wprig_editor_assets() {
-		// wp_enqueue_script( 'wprig-blocks-js', WPRIG_DIR_URL . 'assets/js/wprig.dev.js', array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), microtime(), true );
-		// echo "The path is at ".WPRIG_DIR_URL.'dist/blocks.build.js';
+		// wp_enqueue_script( 'wprig-wc-blocks-js', WPRIG_WC_DIR_URL . 'assets/js/wprig.dev.js', array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), microtime(), true );
+		// echo "The path is at ".WPRIG_WC_DIR_URL.'dist/blocks.build.js';
 
-		wp_enqueue_style( 'wprig-gallery-effects', WPRIG_DIR_URL . 'assets/css/gallery-effects.css', false, microtime() );
+		wp_enqueue_style( 'wprig-gallery-effects', WPRIG_WC_DIR_URL . 'assets/css/gallery-effects.css', false, microtime() );
 
-		wp_enqueue_script( 'wprig-blocks-js',  WPRIG_DIR_URL.'dist/blocks.build.js', array('media'), microtime(), true );
+		wp_enqueue_script( 'wprig-wc-blocks-js',  WPRIG_WC_DIR_URL.'dist/blocks.build.js', array('media'), microtime(), true );
 		
 		$palette = get_theme_support( 'wprig-color-palette' );
 		$palette = array_replace( array( '#062040', '#566372', '#2084F9', '#F3F3F3', '#EEEEEE', '#FFFFFF' ), ( $palette ? $palette[0] : array() ) );
@@ -366,10 +366,10 @@ class WPRIG_Woocommerce_Blocks {
 		$enable_global_settings      = isset( $options['import_with_global_settings'] ) ? $options['import_with_global_settings'] : false;
 		$protocols                   = array( 'http://', 'https://', 'http://www', 'https://www', 'www' );
 		wp_localize_script(
-			'wprig-blocks-js',
+			'wprig-wc-blocks-js',
 			'wprig_admin',
 			array(
-				'plugin'                      => WPRIG_DIR_URL,
+				'plugin'                      => WPRIG_WC_DIR_URL,
 				'ajax'                        => admin_url( 'admin-ajax.php' ),
 				'pro_enable'                  => defined( 'wprig_PRO_VERSION' ) ? true : false,
 				'shapes'                      => $this->getSvgShapes(),
@@ -398,7 +398,7 @@ class WPRIG_Woocommerce_Blocks {
 	 */
 
 	public function getSvgShapes() {
-		$shape_path = WPRIG_DIR_PATH . 'shape';
+		$shape_path = WPRIG_WC_DIR_PATH . 'shape';
 		$shapes     = glob( $shape_path . '/*.svg' );
 		$shapeArray = array();
 		if ( count( $shapes ) ) {
@@ -416,7 +416,7 @@ class WPRIG_Woocommerce_Blocks {
 	 * @since 1.0.0
 	 */
 	public function getSvgDivider() {
-		$divider_path = WPRIG_DIR_PATH . 'assets/divider';
+		$divider_path = WPRIG_WC_DIR_PATH . 'assets/divider';
 		$dividers     = glob( $divider_path . '/*.svg' );
 		$dividerArray = array();
 		if ( count( $dividers ) ) {
@@ -439,7 +439,7 @@ class WPRIG_Woocommerce_Blocks {
 			'wprig_local_script',
 			'wprig_urls',
 			array(
-				'plugin' => WPRIG_DIR_URL,
+				'plugin' => WPRIG_WC_DIR_URL,
 				'ajax'   => admin_url( 'admin-ajax.php' ),
 				'nonce'  => wp_create_nonce( 'wprig_nonce' ),
 			)
@@ -447,16 +447,16 @@ class WPRIG_Woocommerce_Blocks {
 		wp_enqueue_script( 'wprig_local_script' );
 
 		#START_REPLACE
-		wp_enqueue_style( 'wprig-animated-headline-style', WPRIG_DIR_URL . 'assets/css/wprig.animatedheadline.css', false, microtime() );
-		wp_enqueue_style( 'wprig-animation', WPRIG_DIR_URL . 'assets/css/animation.css', false, microtime() );
-		wp_enqueue_style( 'wprig-editor-fields-min', WPRIG_DIR_URL . 'assets/css/fields.css', false, microtime() );
-		wp_enqueue_style( 'wprig-style-min', WPRIG_DIR_URL . 'assets/css/blocks.editor.min.css', false, microtime() );
+		wp_enqueue_style( 'wprig-animated-headline-style', WPRIG_WC_DIR_URL . 'assets/css/wprig.animatedheadline.css', false, microtime() );
+		wp_enqueue_style( 'wprig-animation', WPRIG_WC_DIR_URL . 'assets/css/animation.css', false, microtime() );
+		wp_enqueue_style( 'wprig-editor-fields-min', WPRIG_WC_DIR_URL . 'assets/css/fields.css', false, microtime() );
+		wp_enqueue_style( 'wprig-style-min', WPRIG_WC_DIR_URL . 'assets/css/blocks.editor.min.css', false, microtime() );
 		#END_REPLACE
 
-		wp_enqueue_style( 'font-awesome', WPRIG_DIR_URL . 'assets/css/font-awesome.min.css', false, microtime() );
-		wp_enqueue_script( 'jquery-animatedHeadline', WPRIG_DIR_URL . 'assets/js/jquery.animatedheadline.js', array( 'jquery' ), microtime(), true );
+		wp_enqueue_style( 'font-awesome', WPRIG_WC_DIR_URL . 'assets/css/font-awesome.min.css', false, microtime() );
+		wp_enqueue_script( 'jquery-animatedHeadline', WPRIG_WC_DIR_URL . 'assets/js/jquery.animatedheadline.js', array( 'jquery' ), microtime(), true );
 		
-		wp_register_style( 'wprig-options', WPRIG_DIR_URL . 'assets/css/options.css', false, microtime() );
+		wp_register_style( 'wprig-options', WPRIG_WC_DIR_URL . 'assets/css/options.css', false, microtime() );
 
 		
 	}
@@ -580,22 +580,22 @@ class WPRIG_Woocommerce_Blocks {
 	 * @since 1.0.0
 	 */
 	public function wprig_enqueue_style() {
-		wp_enqueue_style( 'wprig-frontbase', WPRIG_DIR_URL . 'assets/css/frontbase.css', false, microtime() );
+		wp_enqueue_style( 'wprig-frontbase', WPRIG_WC_DIR_URL . 'assets/css/frontbase.css', false, microtime() );
 		if ( get_post_meta( get_the_ID(), '_wprig_css', true ) != '' ) {
 
 			/*
 			 * @warning: Don't Remove `START_REPLACE` and `START_REPLACE` comments. These comments are required for gulp build
 			 */
-			wp_enqueue_style( 'wprig-gallery-effects', WPRIG_DIR_URL . 'assets/css/gallery-effects.css', false, microtime() );
+			wp_enqueue_style( 'wprig-gallery-effects', WPRIG_WC_DIR_URL . 'assets/css/gallery-effects.css', false, microtime() );
 
 
 			#START_REPLACE
-			wp_enqueue_style( 'wprig-animated-headline-style', WPRIG_DIR_URL . 'assets/css/wprig.animatedheadline.css', false, microtime() );
-			wp_enqueue_style( 'wprig-animation', WPRIG_DIR_URL . 'assets/css/animation.css', false, microtime() );
-			wp_enqueue_style( 'wprig-style-min', WPRIG_DIR_URL . 'assets/css/style.min.css', false, microtime() );
+			wp_enqueue_style( 'wprig-animated-headline-style', WPRIG_WC_DIR_URL . 'assets/css/wprig.animatedheadline.css', false, microtime() );
+			wp_enqueue_style( 'wprig-animation', WPRIG_WC_DIR_URL . 'assets/css/animation.css', false, microtime() );
+			wp_enqueue_style( 'wprig-style-min', WPRIG_WC_DIR_URL . 'assets/css/style.min.css', false, microtime() );
 			#END_REPLACE
 
-			wp_enqueue_style( 'wprig-font-awesome', WPRIG_DIR_URL . 'assets/css/font-awesome.min.css', false, microtime() );
+			wp_enqueue_style( 'wprig-font-awesome', WPRIG_WC_DIR_URL . 'assets/css/font-awesome.min.css', false, microtime() );
 		}
 	}
 
@@ -605,7 +605,7 @@ class WPRIG_Woocommerce_Blocks {
 			'wprig_local_script',
 			'wprig_urls',
 			array(
-				'plugin' => WPRIG_DIR_URL,
+				'plugin' => WPRIG_WC_DIR_URL,
 				'ajax'   => admin_url( 'admin-ajax.php' ),
 				'nonce'  => wp_create_nonce( 'wprig_nonce' ),
 			)
@@ -622,23 +622,23 @@ class WPRIG_Woocommerce_Blocks {
 			$has_parallax     = $blocks_meta_data['parallax'];
 
 			// if ( in_array( 'wprig/image-carousel', $available_blocks ) ) {
-				wp_enqueue_script( 'riseup-gallery', WPRIG_DIR_URL . 'assets/js/riseup-gallery.js', array( 'jquery' ), microtime(), true );
-				wp_enqueue_script( 'gallery-carousel', WPRIG_DIR_URL . 'assets/js/front.js', array( 'jquery' ), microtime(), true );
+				wp_enqueue_script( 'riseup-gallery', WPRIG_WC_DIR_URL . 'assets/js/riseup-gallery.js', array( 'jquery' ), microtime(), true );
+				wp_enqueue_script( 'gallery-carousel', WPRIG_WC_DIR_URL . 'assets/js/front.js', array( 'jquery' ), microtime(), true );
 			// }
 
 			wp_localize_script( 'gallery-carousel', 'wprig_gallery',
             array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 			if ( in_array( 'wprig/animatedheadline', $available_blocks ) ) {
-				wp_enqueue_script( 'wprig-animated-headline-script', WPRIG_DIR_URL . 'assets/js/jquery.animatedheadline.js', array( 'jquery' ), microtime(), true );
+				wp_enqueue_script( 'wprig-animated-headline-script', WPRIG_WC_DIR_URL . 'assets/js/jquery.animatedheadline.js', array( 'jquery' ), microtime(), true );
 			}
 
 			if ( in_array( 'wprig/imagecomparison', $available_blocks ) ) {
-				wp_enqueue_script( 'wprig-block-image-comparison', WPRIG_DIR_URL . 'assets/js/blocks/image-comparison.js', array(), microtime() );
+				wp_enqueue_script( 'wprig-block-image-comparison', WPRIG_WC_DIR_URL . 'assets/js/blocks/image-comparison.js', array(), microtime() );
 			}
 
 			if ( $has_interaction ) {
-				wp_enqueue_script( 'wprig-interaction', WPRIG_DIR_URL . 'assets/js/interaction.js', array( 'jquery' ), microtime(), true );
+				wp_enqueue_script( 'wprig-interaction', WPRIG_WC_DIR_URL . 'assets/js/interaction.js', array( 'jquery' ), microtime(), true );
 			}
 
 		} else {
@@ -649,7 +649,7 @@ class WPRIG_Woocommerce_Blocks {
 			}
 
 
-			wp_enqueue_script( 'wprig-interaction', WPRIG_DIR_URL . 'assets/js/interaction.js', array( 'jquery' ), microtime(), true );
+			wp_enqueue_script( 'wprig-interaction', WPRIG_WC_DIR_URL . 'assets/js/interaction.js', array( 'jquery' ), microtime(), true );
 		}
 
 
@@ -712,8 +712,8 @@ class WPRIG_Woocommerce_Blocks {
 			$categories,
 			array(
 				array(
-					'slug'  => 'wprig-blocks',
-					'title' => __( 'WPRIG Blocks', 'wprig-blocks' ),
+					'slug'  => 'wprig-wc-blocks',
+					'title' => __( 'WPRIG WC Blocks', 'wprig-wc-blocks' ),
 				),
 			)
 		);
@@ -1323,7 +1323,7 @@ class WPRIG_Woocommerce_Blocks {
 	 * Get Blocks
 	 */
 	public function wprig_get_sections() {
-		 // $cachedBlockFile = "wprig-blocks.json";
+		 // $cachedBlockFile = "wprig-wc-blocks.json";
 		// $cache_time = ( 60*60*24*7 ); //cached for 7 days
 
 		$sectionData = array();
@@ -1362,7 +1362,7 @@ class WPRIG_Woocommerce_Blocks {
 		}
 		$blockData = json_decode( $blockRequest['body'], true );
 		/*
-		 $cachedBlockFile = "wprig-blocks.json";
+		 $cachedBlockFile = "wprig-wc-blocks.json";
 		$upload_dir = wp_upload_dir();
 		$dir = trailingslashit( $upload_dir[ 'basedir' ] ) . 'wprig/cache/';
 		$file_path_name = $dir . $cachedBlockFile;

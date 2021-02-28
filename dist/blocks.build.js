@@ -148,6 +148,24 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/blocks/featured-product/style.scss":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/blocks/featured-product/style.scss ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".wprig-productgrid-is-loading {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 200px; }\n\n.wprig-post-list-wrapper {\n  display: block;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap; }\n  .wprig-post-list-wrapper .wprig-post-list-img {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n    position: relative;\n    width: 100%;\n    min-height: 1px;\n    overflow: hidden; }\n  .wprig-post-list-wrapper .wprig-post-list-content {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n    position: relative;\n    width: 100%;\n    min-height: 1px;\n    padding-left: 20px; }\n\n@media screen and (min-width: 767px) {\n  .wprig-post-list-wrapper {\n    display: -ms-flexbox;\n    display: flex; }\n    .wprig-post-list-wrapper .wprig-post-list-img {\n      -ms-flex: 0 0 40%;\n      flex: 0 0 40%;\n      max-width: 40%; }\n    .wprig-post-list-wrapper .wprig-post-list-img + .wprig-post-list-content {\n      -ms-flex: 0 0 60%;\n      flex: 0 0 60%;\n      max-width: 60%; } }\n\n.wprig-productgrid-style-4 {\n  position: relative;\n  overflow: hidden; }\n  .wprig-productgrid-style-4 .wprig-post-grid-img,\n  .wprig-productgrid-style-4 .wprig-post-list-img {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 2;\n    -webkit-background-size: cover;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    overflow: hidden; }\n    .wprig-productgrid-style-4 .wprig-post-grid-img img,\n    .wprig-productgrid-style-4 .wprig-post-list-img img {\n      position: absolute;\n      width: auto;\n      height: auto;\n      min-width: 100%;\n      max-width: none;\n      left: 50%;\n      top: 50%;\n      -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n      transform: translate(-50%, -50%);\n      min-height: 100%; }\n  .wprig-productgrid-style-4 .wprig-post-grid-content,\n  .wprig-productgrid-style-4 .wprig-post-list-content {\n    opacity: 1;\n    position: relative;\n    z-index: 10;\n    overflow: hidden;\n    width: 100%;\n    max-width: 100%;\n    padding: 20px; }\n  .wprig-productgrid-style-4 > div .wprig-post-grid-img,\n  .wprig-productgrid-style-4 > div .wprig-post-list-img {\n    width: 100%;\n    max-width: 100%; }\n  .wprig-productgrid-style-4:before {\n    position: absolute;\n    content: \"\";\n    left: 0;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    z-index: 3;\n    transition: 400ms; }\n  .wprig-productgrid-style-4 .wprig-post-list-top .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-list-top .wprig-post-grid-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-top .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-top .wprig-post-grid-content {\n    top: 0;\n    height: 100%;\n    position: absolute;\n    display: grid;\n    align-content: flex-start; }\n  .wprig-productgrid-style-4 .wprig-post-list-center .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-list-center .wprig-post-grid-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-center .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-center .wprig-post-grid-content {\n    top: 0;\n    height: 100%;\n    position: absolute;\n    display: grid;\n    align-content: center; }\n  .wprig-productgrid-style-4 .wprig-post-list-bottom .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-list-bottom .wprig-post-grid-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-bottom .wprig-post-list-content,\n  .wprig-productgrid-style-4 .wprig-post-grid-bottom .wprig-post-grid-content {\n    top: 0;\n    height: 100%;\n    position: absolute;\n    display: grid;\n    align-content: flex-end; }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-zoom-out .wprig-post-image {\n  transition: transform 0.35s;\n  transform: scale(1.2); }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-zoom-in .wprig-post-image {\n  transition: transform 0.35s;\n  transform: scale(1); }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-slide-bottom .wprig-post-image {\n  transition: transform 0.35s;\n  transform: translate3d(0, 20px, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-slide-top .wprig-post-image {\n  transition: transform 0.35s;\n  transform: translate3d(0, -20px, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-slide-right .wprig-post-image {\n  transition: transform 0.35s;\n  transform: translate3d(20px, 0, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:not(.wprig-productgrid-style-4) .wprig-post-img.wprig-post-img-slide-left .wprig-post-image {\n  transition: transform 0.35s;\n  transform: translate3d(-20px, 0, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-zoom-out .wprig-post-image {\n  transform: scale(1); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-zoom-in .wprig-post-image {\n  transform: scale(1.2); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-slide-bottom .wprig-post-image {\n  transform: translate3d(0, 0px, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-slide-top .wprig-post-image {\n  transform: translate3d(0, 0px, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-slide-right .wprig-post-image {\n  transform: translate3d(0, 0, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid:hover:not(.wprig-productgrid-style-4) .wprig-post-img-slide-left .wprig-post-image {\n  transform: translate3d(0, 0, 0) scale3d(1.2, 1.2, 1); }\n\n.wprig-productgrid {\n  position: relative; }\n  .wprig-productgrid img {\n    display: block; }\n  .wprig-productgrid .wprig-productgrid-title {\n    margin: 0 !important;\n    line-height: 1; }\n    .wprig-productgrid .wprig-productgrid-title a {\n      text-decoration: none !important; }\n      .wprig-productgrid .wprig-productgrid-title a:hover {\n        text-decoration: none; }\n  .wprig-productgrid .wprig-productgrid-intro,\n  .wprig-productgrid .wprig-productgrid-intro p {\n    font-size: 15px;\n    line-height: 24px;\n    margin: 0; }\n  .wprig-productgrid .wprig-productgrid-meta {\n    font-size: 14px;\n    line-height: 22px; }\n  .wprig-productgrid .wprig-productgrid-btn {\n    display: inline-block;\n    text-decoration: none !important; }\n    .wprig-productgrid .wprig-productgrid-btn:hover {\n      text-decoration: none !important; }\n  .wprig-productgrid .wprig-button-fill.is-small {\n    padding: 5px 10px;\n    font-size: 14px; }\n  .wprig-productgrid .wprig-button-fill.is-medium {\n    padding: 8px 15px;\n    font-size: 16px; }\n  .wprig-productgrid .wprig-button-fill.is-large {\n    padding: 13px 20px;\n    font-size: 18px; }\n\n.wprig-post-img {\n  position: relative;\n  overflow: hidden; }\n  .wprig-post-img .wprig-productgrid-cat-position {\n    position: absolute; }\n    .wprig-post-img .wprig-productgrid-cat-position.wprig-productgrid-cat-position-leftTop {\n      top: 20px;\n      left: 20px; }\n    .wprig-post-img .wprig-productgrid-cat-position.wprig-productgrid-cat-position-rightTop {\n      top: 20px;\n      right: 20px; }\n    .wprig-post-img .wprig-productgrid-cat-position.wprig-productgrid-cat-position-leftBottom {\n      bottom: 20px;\n      left: 20px; }\n    .wprig-post-img .wprig-productgrid-cat-position.wprig-productgrid-cat-position-rightBottom {\n      bottom: 20px;\n      right: 20px; }\n\n.wprig-productgrid-category a {\n  transition: 400ms !important;\n  text-decoration: none !important; }\n  .wprig-productgrid-category a:hover {\n    text-decoration: none !important; }\n\n.wprig-productgrid-category.wprig-backend a {\n  pointer-events: none;\n  cursor: default; }\n\n.wprig-productgrid-meta span {\n  padding-left: 12px;\n  position: relative;\n  padding-right: 12px; }\n  .wprig-productgrid-meta span i {\n    font-style: normal;\n    margin-right: 3px; }\n  .wprig-productgrid-meta span:before {\n    position: absolute;\n    content: \"\";\n    background: #d8d8d8;\n    left: -1px;\n    top: 50%;\n    width: 2px;\n    height: 2px;\n    border-radius: 20px;\n    margin-top: -1px; }\n  .wprig-productgrid-meta span:first-child {\n    padding-left: 0; }\n    .wprig-productgrid-meta span:first-child:before {\n      display: none; }\n\n.wprig-productgrid-meta a {\n  text-decoration: none !important; }\n  .wprig-productgrid-meta a:hover {\n    text-decoration: none !important; }\n\n.wprig-post-list-center.wprig-post-list-wrapper {\n  align-items: center; }\n\n.wprig-post-list-top.wprig-post-list-wrapper {\n  align-items: flex-start; }\n\n.wprig-post-list-bottom.wprig-post-list-wrapper {\n  align-items: flex-end; }\n\n.wprig-post-list-view.wprig-productgrid-style-3 .wprig-post-list-wrapper .wprig-post-list-content {\n  background: #fff;\n  padding: 20px;\n  position: relative;\n  z-index: 1; }\n\n.wprig-post-list-view.wprig-productgrid-style-3 .wprig-post-list-wrapper .wprig-post-list-img + .wprig-post-list-content {\n  margin-left: -40px; }\n\n.wprig-post-grid-view.wprig-productgrid-style-3 .wprig-post-grid-content {\n  background: #fff;\n  position: relative;\n  z-index: 1;\n  padding: 20px; }\n\n.wprig-post-grid-view.wprig-productgrid-style-3 .wprig-post-grid-img + .wprig-post-grid-content {\n  margin: -80px auto 0;\n  width: 90%; }\n\n.wprig-post-grid-view.wprig-productgrid-style-3 .wprig-post-grid-left .wprig-post-grid-content {\n  float: left; }\n\n.wprig-post-grid-view.wprig-productgrid-style-3 .wprig-post-grid-right .wprig-post-grid-content {\n  float: right; }\n\n.wprig-productgrid-layout-4 {\n  display: grid;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n  grid-template-columns: 1fr; }\n  .wprig-productgrid-layout-4 .wprig-post-4-wrap {\n    display: grid;\n    grid-column-gap: 30px;\n    grid-row-gap: 30px;\n    grid-template-columns: 0.5fr 1fr; }\n  .wprig-productgrid-layout-4 .wprig-productgrid:nth-child(1) {\n    grid-column-start: 1;\n    grid-row-start: 1;\n    grid-row-end: 6; }\n    .wprig-productgrid-layout-4 .wprig-productgrid:nth-child(1) .wprig-post-4-wrap {\n      grid-template-columns: 1fr; }\n\n@media (min-width: 767px) {\n  .wprig-productgrid-layout-4 {\n    grid-template-columns: 1fr 1fr; } }\n\n@media screen and (max-width: 992px) {\n  .wprig-post-list-center.wprig-post-list-wrapper {\n    align-items: flex-start; }\n  .wprig-post-list-view.wprig-productgrid-style-3\n.wprig-post-list-wrapper\n.wprig-post-list-img\n+ .wprig-post-list-content {\n    margin-left: 0; } }\n\n.wprig-productgrid-column {\n  display: grid;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px; }\n\n.wprig-productgrid-column-xs1 {\n  grid-template-columns: 1fr; }\n  .wprig-productgrid-column-xs1.wprig-productgrid-layout-5 {\n    column-count: 1; }\n\n.wprig-productgrid-column-xs2 {\n  grid-template-columns: 1fr 1fr; }\n  .wprig-productgrid-column-xs2.wprig-productgrid-layout-5 {\n    column-count: 2; }\n\n.wprig-productgrid-column-xs3 {\n  grid-template-columns: 1fr 1fr 1fr; }\n  .wprig-productgrid-column-xs3.wprig-productgrid-layout-5 {\n    column-count: 3; }\n\n@media (min-width: 767px) {\n  .wprig-productgrid-column-sm1 {\n    grid-template-columns: 1fr; }\n    .wprig-productgrid-column-sm1.wprig-productgrid-layout-5 {\n      column-count: 1; }\n  .wprig-productgrid-column-sm2 {\n    grid-template-columns: 1fr 1fr; }\n    .wprig-productgrid-column-sm2.wprig-productgrid-layout-5 {\n      column-count: 2; }\n  .wprig-productgrid-column-sm3 {\n    grid-template-columns: 1fr 1fr 1fr; }\n    .wprig-productgrid-column-sm3.wprig-productgrid-layout-5 {\n      column-count: 3; } }\n\n@media (min-width: 992px) {\n  .wprig-productgrid-column-md1 {\n    grid-template-columns: 1fr; }\n    .wprig-productgrid-column-md1.wprig-productgrid-layout-5 {\n      column-count: 1; }\n  .wprig-productgrid-column-md2 {\n    grid-template-columns: 1fr 1fr; }\n    .wprig-productgrid-column-md2.wprig-productgrid-layout-5 {\n      column-count: 2; }\n  .wprig-productgrid-column-md3 {\n    grid-template-columns: 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md3.wprig-productgrid-layout-5 {\n      column-count: 3; }\n  .wprig-productgrid-column-md4 {\n    grid-template-columns: 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md4.wprig-productgrid-layout-5 {\n      column-count: 3; }\n  .wprig-productgrid-column-md5 {\n    grid-template-columns: 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md5.wprig-productgrid-layout-5 {\n      column-count: 3; }\n  .wprig-productgrid-column-md6 {\n    grid-template-columns: 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md6.wprig-productgrid-layout-5 {\n      column-count: 3; } }\n\n@media (min-width: 1299px) {\n  .wprig-productgrid-column-md4 {\n    grid-template-columns: 1fr 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md4.wprig-productgrid-layout-5 {\n      column-count: 4; }\n  .wprig-productgrid-column-md5 {\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md5.wprig-productgrid-layout-5 {\n      column-count: 5; }\n  .wprig-productgrid-column-md6 {\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }\n    .wprig-productgrid-column-md6.wprig-productgrid-layout-5 {\n      column-count: 6; } }\n\n.wprig-productgrid-pagination {\n  font-weight: 600;\n  font-size: 16px;\n  color: #363636; }\n  .wprig-productgrid-pagination a,\n  .wprig-productgrid-pagination > span,\n  .wprig-productgrid-pagination button {\n    line-height: 48px;\n    min-width: 50px;\n    text-align: center;\n    background: white;\n    border: 1px solid #BBC0D4;\n    border-radius: 6px;\n    margin-bottom: 10px;\n    display: inline-block;\n    text-decoration: none;\n    color: inherit; }\n    .wprig-productgrid-pagination a:hover,\n    .wprig-productgrid-pagination > span:hover,\n    .wprig-productgrid-pagination button:hover {\n      color: #348EF8; }\n    .wprig-productgrid-pagination a.current, .wprig-productgrid-pagination a.active,\n    .wprig-productgrid-pagination > span.current,\n    .wprig-productgrid-pagination > span.active,\n    .wprig-productgrid-pagination button.current,\n    .wprig-productgrid-pagination button.active {\n      color: #fff;\n      background: #348EF8;\n      border-color: #348EF8; }\n    .wprig-productgrid-pagination a.wprig-pagination-prev span,\n    .wprig-productgrid-pagination > span.wprig-pagination-prev span,\n    .wprig-productgrid-pagination button.wprig-pagination-prev span {\n      margin-right: 4px; }\n    .wprig-productgrid-pagination a.wprig-pagination-next span,\n    .wprig-productgrid-pagination > span.wprig-pagination-next span,\n    .wprig-productgrid-pagination button.wprig-pagination-next span {\n      margin-left: 4px; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/css/alignment.scss":
 /*!************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/css/alignment.scss ***!
@@ -2663,10 +2681,11 @@ module.exports = function (list, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_renderfield__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/renderfield */ "./src/components/renderfield.js");
-/* harmony import */ var _plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./plugins */ "./src/plugins/index.js");
-/* harmony import */ var _blocks_pagesettings__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/pagesettings */ "./src/blocks/pagesettings/index.js");
-/* harmony import */ var _blocks_pagesettings__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_pagesettings__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _helpers_parse_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/parse-css */ "./src/helpers/parse-css.js");
+/* harmony import */ var _blocks_featured_product_block__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/featured-product/block */ "./src/blocks/featured-product/block.js");
+/* harmony import */ var _plugins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plugins */ "./src/plugins/index.js");
+/* harmony import */ var _blocks_pagesettings__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/pagesettings */ "./src/blocks/pagesettings/index.js");
+/* harmony import */ var _blocks_pagesettings__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_pagesettings__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _helpers_parse_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers/parse-css */ "./src/helpers/parse-css.js");
 /**
  * WPRIG Gutenberg Blocks
  *
@@ -2716,7 +2735,8 @@ __webpack_require__.r(__webpack_exports__);
 // import "./blocks/masonry-image-grid/block";
 // import "./blocks/text/block";
 // import "./blocks/timeline/block";
-// import "./blocks/progressbar/block";
+
+ // import "./blocks/progressbar/block";
 // import "./blocks/modal/block";
 // import "./blocks/video-popup/block";
 // import "./blocks/panel/block";
@@ -2765,11 +2785,477 @@ wp.data.subscribe(function () {
   if (isPreviewingPost() || isPublishingPost() || isSavingPost() && !isAutosavingPost()) {
     if (window.bindCss === false) {
       setTimeout(function () {
-        Object(_helpers_parse_css__WEBPACK_IMPORTED_MODULE_3__["default"])(isPreviewingPost() ? false : true);
+        Object(_helpers_parse_css__WEBPACK_IMPORTED_MODULE_4__["default"])(isPreviewingPost() ? false : true);
       }, 600);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./src/blocks/featured-product/Edit.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/featured-product/Edit.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helpers_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../helpers/icons */ "./src/helpers/icons.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/* eslint-disable react/react-in-jsx-scope */
+var __ = wp.i18n.__;
+var compose = wp.compose.compose; // const { withSelect } = wp.data;
+
+var addQueryArgs = wp.url.addQueryArgs;
+var _wp$element = wp.element,
+    Fragment = _wp$element.Fragment,
+    Component = _wp$element.Component,
+    createRef = _wp$element.createRef;
+var _wp$date = wp.date,
+    dateI18n = _wp$date.dateI18n,
+    __experimentalGetSettings = _wp$date.__experimentalGetSettings;
+var _wp$blockEditor = wp.blockEditor,
+    InspectorControls = _wp$blockEditor.InspectorControls,
+    BlockControls = _wp$blockEditor.BlockControls;
+var _wp$components = wp.components,
+    RangeControl = _wp$components.RangeControl,
+    PanelBody = _wp$components.PanelBody,
+    Toolbar = _wp$components.Toolbar,
+    Spinner = _wp$components.Spinner,
+    TextControl = _wp$components.TextControl,
+    SelectControl = _wp$components.SelectControl;
+var _wp$wprigComponents = wp.wprigComponents,
+    Range = _wp$wprigComponents.Range,
+    ButtonGroup = _wp$wprigComponents.ButtonGroup,
+    InlineToolbar = _wp$wprigComponents.Inline.InlineToolbar,
+    Toggle = _wp$wprigComponents.Toggle,
+    Dropdown = _wp$wprigComponents.Dropdown,
+    Select = _wp$wprigComponents.Select,
+    Separator = _wp$wprigComponents.Separator,
+    ColorAdvanced = _wp$wprigComponents.ColorAdvanced,
+    Typography = _wp$wprigComponents.Typography,
+    Color = _wp$wprigComponents.Color,
+    Border = _wp$wprigComponents.Border,
+    BorderRadius = _wp$wprigComponents.BorderRadius,
+    Padding = _wp$wprigComponents.Padding,
+    BoxShadow = _wp$wprigComponents.BoxShadow,
+    Styles = _wp$wprigComponents.Styles,
+    Tabs = _wp$wprigComponents.Tabs,
+    Tab = _wp$wprigComponents.Tab,
+    RadioAdvanced = _wp$wprigComponents.RadioAdvanced,
+    Alignment = _wp$wprigComponents.Alignment,
+    Margin = _wp$wprigComponents.Margin,
+    _wp$wprigComponents$g = _wp$wprigComponents.globalSettings,
+    globalSettingsPanel = _wp$wprigComponents$g.globalSettingsPanel,
+    animationSettings = _wp$wprigComponents$g.animationSettings,
+    CssGenerator = _wp$wprigComponents.CssGenerator.CssGenerator,
+    _wp$wprigComponents$C = _wp$wprigComponents.ContextMenu,
+    ContextMenu = _wp$wprigComponents$C.ContextMenu,
+    handleContextMenu = _wp$wprigComponents$C.handleContextMenu,
+    withCSSGenerator = _wp$wprigComponents.withCSSGenerator,
+    InspectorTabs = _wp$wprigComponents.InspectorTabs,
+    InspectorTab = _wp$wprigComponents.InspectorTab;
+
+var CATEGORIES_LIST_QUERY = {
+  per_page: -1
+};
+
+var Edit = /*#__PURE__*/function (_Component) {
+  _inherits(Edit, _Component);
+
+  var _super = _createSuper(Edit);
+
+  function Edit() {
+    var _this;
+
+    _classCallCheck(this, Edit);
+
+    _this = _super.apply(this, arguments);
+
+    _defineProperty(_assertThisInitialized(_this), "renderFeaturedImage", function (post) {
+      var _this$props$attribute = _this.props.attributes,
+          layout = _this$props$attribute.layout,
+          style = _this$props$attribute.style,
+          imgSize = _this$props$attribute.imgSize,
+          imageAnimation = _this$props$attribute.imageAnimation,
+          showCategory = _this$props$attribute.showCategory,
+          categoryPosition = _this$props$attribute.categoryPosition;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "".concat(layout === 1 ? 'wprig-post-list-img' : 'wprig-post-grid-img', " wprig-post-img wprig-post-img-").concat(imageAnimation)
+      }, /*#__PURE__*/React.createElement("img", {
+        className: "wprig-post-image",
+        src: post.wprig_featured_image_url && post.wprig_featured_image_url[imgSize][0]
+      }), showCategory == 'badge' && style !== 4 && /*#__PURE__*/React.createElement("div", {
+        className: "wprig-productgrid-cat-position wprig-productgrid-cat-position-".concat(categoryPosition)
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "wprig-productgrid-category wprig-backend",
+        dangerouslySetInnerHTML: {
+          __html: post.wprig_category
+        }
+      })));
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "renderCardContent", function (post) {
+      var _this$props$attribute2 = _this.props.attributes,
+          layout = _this$props$attribute2.layout,
+          style = _this$props$attribute2.style,
+          readmoreStyle = _this$props$attribute2.readmoreStyle,
+          showCategory = _this$props$attribute2.showCategory,
+          categoryPosition = _this$props$attribute2.categoryPosition,
+          showTitle = _this$props$attribute2.showTitle,
+          titlePosition = _this$props$attribute2.titlePosition,
+          showAuthor = _this$props$attribute2.showAuthor,
+          showDates = _this$props$attribute2.showDates,
+          showComment = _this$props$attribute2.showComment,
+          showExcerpt = _this$props$attribute2.showExcerpt,
+          excerptLimit = _this$props$attribute2.excerptLimit,
+          showReadMore = _this$props$attribute2.showReadMore,
+          buttonText = _this$props$attribute2.buttonText,
+          readmoreSize = _this$props$attribute2.readmoreSize;
+      var title = /*#__PURE__*/React.createElement("h3", {
+        className: "wprig-productgrid-title"
+      }, /*#__PURE__*/React.createElement("a", null, post.title.rendered));
+      return /*#__PURE__*/React.createElement("div", {
+        className: "".concat(layout === 1 ? 'wprig-post-list-content' : 'wprig-post-grid-content')
+      }, showCategory === 'default' && /*#__PURE__*/React.createElement("span", {
+        className: "wprig-productgrid-category wprig-backend",
+        dangerouslySetInnerHTML: {
+          __html: post.wprig_category
+        }
+      }), showCategory == 'badge' && style === 4 && /*#__PURE__*/React.createElement("div", {
+        className: "wprig-productgrid-cat-position wprig-productgrid-cat-position-".concat(categoryPosition)
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "wprig-productgrid-category wprig-backend",
+        dangerouslySetInnerHTML: {
+          __html: post.wprig_category
+        }
+      })), showTitle && titlePosition == true && title, showTitle && titlePosition == false && title, showExcerpt && /*#__PURE__*/React.createElement("div", {
+        className: "wprig-productgrid-intro",
+        dangerouslySetInnerHTML: {
+          __html: _this.truncate(post.excerpt.rendered, excerptLimit)
+        }
+      }), showReadMore && /*#__PURE__*/React.createElement("div", {
+        className: "wprig-productgrid-btn-wrapper"
+      }, /*#__PURE__*/React.createElement("a", {
+        className: "wprig-productgrid-btn wprig-button-".concat(readmoreStyle, " is-").concat(readmoreSize)
+      }, buttonText)));
+    });
+
+    _this.state = {
+      device: 'md',
+      spacer: true,
+      categoriesList: []
+    };
+    _this.wprigContextMenu = createRef();
+    return _this;
+  }
+
+  _createClass(Edit, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          setAttributes = _this$props.setAttributes,
+          clientId = _this$props.clientId,
+          uniqueId = _this$props.attributes.uniqueId;
+      this.isStillMounted = true;
+      this.fetchRequest = wp.apiFetch({
+        path: addQueryArgs('/wp/v2/categories', CATEGORIES_LIST_QUERY)
+      }).then(function (categoriesList) {
+        if (_this2.isStillMounted) {
+          _this2.setState({
+            categoriesList: categoriesList
+          });
+        }
+      })["catch"](function () {
+        if (_this2.isStillMounted) {
+          _this2.setState({
+            categoriesList: []
+          });
+        }
+      });
+
+      var _client = clientId.substr(0, 6);
+
+      if (!uniqueId) {
+        setAttributes({
+          uniqueId: _client
+        });
+      } else if (uniqueId && uniqueId != _client) {
+        setAttributes({
+          uniqueId: _client
+        });
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.isStillMounted = false;
+    }
+  }, {
+    key: "truncate",
+    value: function truncate(value, limit) {
+      if (value.split(' ').length > limit) {
+        return value.split(' ').splice(0, limit).join(' ');
+      }
+
+      return value;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          setAttributes = _this$props2.setAttributes,
+          posts = _this$props2.posts,
+          name = _this$props2.name,
+          clientId = _this$props2.clientId,
+          attributes = _this$props2.attributes,
+          taxonomyList = _this$props2.taxonomyList,
+          _this$props2$attribut = _this$props2.attributes,
+          uniqueId = _this$props2$attribut.uniqueId,
+          className = _this$props2$attribut.className,
+          taxonomy = _this$props2$attribut.taxonomy,
+          categories = _this$props2$attribut.categories,
+          tags = _this$props2$attribut.tags,
+          order = _this$props2$attribut.order,
+          orderBy = _this$props2$attribut.orderBy,
+          postsToShow = _this$props2$attribut.postsToShow,
+          enablePagination = _this$props2$attribut.enablePagination,
+          page = _this$props2$attribut.page,
+          paginationType = _this$props2$attribut.paginationType,
+          pageAlignment = _this$props2$attribut.pageAlignment,
+          paginationTypography = _this$props2$attribut.paginationTypography,
+          pagesColor = _this$props2$attribut.pagesColor,
+          pagesHoverColor = _this$props2$attribut.pagesHoverColor,
+          pagesActiveColor = _this$props2$attribut.pagesActiveColor,
+          pagesbgColor = _this$props2$attribut.pagesbgColor,
+          pagesbgHoverColor = _this$props2$attribut.pagesbgHoverColor,
+          pagesbgActiveColor = _this$props2$attribut.pagesbgActiveColor,
+          pagesBorder = _this$props2$attribut.pagesBorder,
+          pagesHoverBorder = _this$props2$attribut.pagesHoverBorder,
+          pagesActiveBorder = _this$props2$attribut.pagesActiveBorder,
+          pagesShadow = _this$props2$attribut.pagesShadow,
+          pagesHoverShadow = _this$props2$attribut.pagesHoverShadow,
+          pagesActiveShadow = _this$props2$attribut.pagesActiveShadow,
+          pagesBorderRadius = _this$props2$attribut.pagesBorderRadius,
+          pagePadding = _this$props2$attribut.pagePadding,
+          pageMargin = _this$props2$attribut.pageMargin,
+          showImages = _this$props2$attribut.showImages,
+          imgSize = _this$props2$attribut.imgSize,
+          enableFixedHeight = _this$props2$attribut.enableFixedHeight,
+          fixedHeight = _this$props2$attribut.fixedHeight,
+          imageRadius = _this$props2$attribut.imageRadius,
+          imageAnimation = _this$props2$attribut.imageAnimation,
+          cardBackground = _this$props2$attribut.cardBackground,
+          cardBorder = _this$props2$attribut.cardBorder,
+          cardBorderRadius = _this$props2$attribut.cardBorderRadius,
+          cardPadding = _this$props2$attribut.cardPadding,
+          cardBoxShadow = _this$props2$attribut.cardBoxShadow,
+          cardSpace = _this$props2$attribut.cardSpace,
+          stackBg = _this$props2$attribut.stackBg,
+          stackWidth = _this$props2$attribut.stackWidth,
+          stackSpace = _this$props2$attribut.stackSpace,
+          stackBorderRadius = _this$props2$attribut.stackBorderRadius,
+          stackPadding = _this$props2$attribut.stackPadding,
+          stackBoxShadow = _this$props2$attribut.stackBoxShadow,
+          readmoreStyle = _this$props2$attribut.readmoreStyle,
+          buttonText = _this$props2$attribut.buttonText,
+          readmoreSize = _this$props2$attribut.readmoreSize,
+          readmoreCustomSize = _this$props2$attribut.readmoreCustomSize,
+          readmoreTypography = _this$props2$attribut.readmoreTypography,
+          readmoreBg = _this$props2$attribut.readmoreBg,
+          readmoreHoverBg = _this$props2$attribut.readmoreHoverBg,
+          readmoreBorder = _this$props2$attribut.readmoreBorder,
+          readmoreBorderRadius = _this$props2$attribut.readmoreBorderRadius,
+          readmoreBoxShadow = _this$props2$attribut.readmoreBoxShadow,
+          readmoreColor = _this$props2$attribut.readmoreColor,
+          readmoreColor2 = _this$props2$attribut.readmoreColor2,
+          readmoreHoverColor = _this$props2$attribut.readmoreHoverColor,
+          layout = _this$props2$attribut.layout,
+          style = _this$props2$attribut.style,
+          column = _this$props2$attribut.column,
+          showDates = _this$props2$attribut.showDates,
+          showComment = _this$props2$attribut.showComment,
+          showAuthor = _this$props2$attribut.showAuthor,
+          showCategory = _this$props2$attribut.showCategory,
+          categoryPosition = _this$props2$attribut.categoryPosition,
+          showExcerpt = _this$props2$attribut.showExcerpt,
+          excerptLimit = _this$props2$attribut.excerptLimit,
+          showReadMore = _this$props2$attribut.showReadMore,
+          showTitle = _this$props2$attribut.showTitle,
+          titlePosition = _this$props2$attribut.titlePosition,
+          showSeparator = _this$props2$attribut.showSeparator,
+          separatorColor = _this$props2$attribut.separatorColor,
+          separatorHeight = _this$props2$attribut.separatorHeight,
+          separatorSpace = _this$props2$attribut.separatorSpace,
+          titleTypography = _this$props2$attribut.titleTypography,
+          metaTypography = _this$props2$attribut.metaTypography,
+          excerptTypography = _this$props2$attribut.excerptTypography,
+          categoryTypography = _this$props2$attribut.categoryTypography,
+          titleColor = _this$props2$attribut.titleColor,
+          titleOverlayColor = _this$props2$attribut.titleOverlayColor,
+          metaColor = _this$props2$attribut.metaColor,
+          metaOverlayColor = _this$props2$attribut.metaOverlayColor,
+          titleHoverColor = _this$props2$attribut.titleHoverColor,
+          excerptColor = _this$props2$attribut.excerptColor,
+          excerptColor2 = _this$props2$attribut.excerptColor2,
+          categoryColor = _this$props2$attribut.categoryColor,
+          categoryColor2 = _this$props2$attribut.categoryColor2,
+          categoryHoverColor = _this$props2$attribut.categoryHoverColor,
+          categoryHoverColor2 = _this$props2$attribut.categoryHoverColor2,
+          categoryBackground = _this$props2$attribut.categoryBackground,
+          categoryHoverBackground = _this$props2$attribut.categoryHoverBackground,
+          categoryRadius = _this$props2$attribut.categoryRadius,
+          categoryPadding = _this$props2$attribut.categoryPadding,
+          badgePosition = _this$props2$attribut.badgePosition,
+          badgePadding = _this$props2$attribut.badgePadding,
+          bgColor = _this$props2$attribut.bgColor,
+          border = _this$props2$attribut.border,
+          borderRadius = _this$props2$attribut.borderRadius,
+          padding = _this$props2$attribut.padding,
+          boxShadow = _this$props2$attribut.boxShadow,
+          contentPosition = _this$props2$attribut.contentPosition,
+          girdContentPosition = _this$props2$attribut.girdContentPosition,
+          overlayBg = _this$props2$attribut.overlayBg,
+          overlayHoverBg = _this$props2$attribut.overlayHoverBg,
+          overlayBlend = _this$props2$attribut.overlayBlend,
+          overlayHeight = _this$props2$attribut.overlayHeight,
+          overlaySpace = _this$props2$attribut.overlaySpace,
+          overlayBorderRadius = _this$props2$attribut.overlayBorderRadius,
+          columnGap = _this$props2$attribut.columnGap,
+          contentPadding = _this$props2$attribut.contentPadding,
+          titleSpace = _this$props2$attribut.titleSpace,
+          categorySpace = _this$props2$attribut.categorySpace,
+          metaSpace = _this$props2$attribut.metaSpace,
+          excerptSpace = _this$props2$attribut.excerptSpace,
+          animation = _this$props2$attribut.animation,
+          globalZindex = _this$props2$attribut.globalZindex,
+          enablePosition = _this$props2$attribut.enablePosition,
+          selectPosition = _this$props2$attribut.selectPosition,
+          positionXaxis = _this$props2$attribut.positionXaxis,
+          positionYaxis = _this$props2$attribut.positionYaxis,
+          hideTablet = _this$props2$attribut.hideTablet,
+          hideMobile = _this$props2$attribut.hideMobile,
+          globalCss = _this$props2$attribut.globalCss;
+      var device = this.state.device;
+      var pages = Math.ceil(wprig_admin.publishedPosts / postsToShow);
+      return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(BlockControls, null, /*#__PURE__*/React.createElement(Toolbar, null, /*#__PURE__*/React.createElement(InlineToolbar, _extends({
+        data: [{
+          name: 'InlineSpacer',
+          key: 'spacer',
+          responsive: true,
+          unit: ['px', 'em', '%']
+        }]
+      }, this.props, {
+        prevState: this.state
+      })))), globalSettingsPanel(enablePosition, selectPosition, positionXaxis, positionYaxis, globalZindex, hideTablet, hideMobile, globalCss, setAttributes));
+    }
+  }]);
+
+  return Edit;
+}(Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (compose([withCSSGenerator()])(Edit));
+
+/***/ }),
+
+/***/ "./src/blocks/featured-product/block.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/featured-product/block.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/featured-product/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Edit */ "./src/blocks/featured-product/Edit.js");
+
+
+var __ = wp.i18n.__;
+var registerBlockType = wp.blocks.registerBlockType;
+registerBlockType('wprig/featured-products', {
+  title: __('Featured Products'),
+  description: 'Fetch Products posts and display them beautifully .',
+  icon: 'universal-access-alt',
+  category: 'wprig-blocks',
+  supports: {
+    align: ['center', 'wide', 'full']
+  },
+  keywords: [__('Product'), __('Featured Product Grid'), __('Grid')],
+  example: {
+    attributes: {
+      layout: 2,
+      column: {
+        md: 1
+      },
+      showExcerpt: false,
+      postsToShow: 1
+    }
+  },
+  edit: _Edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: function save(props) {
+    return null;
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/featured-product/style.scss":
+/*!************************************************!*\
+  !*** ./src/blocks/featured-product/style.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/blocks/featured-product/style.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
 
 /***/ }),
 

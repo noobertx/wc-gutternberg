@@ -17,10 +17,10 @@
 
 
  // Define Dir URL
-define('WPRIG_DIR_URL', plugin_dir_url(__FILE__));
+define('WPRIG_WC_DIR_URL', plugin_dir_url(__FILE__));
 
 // Define Physical Path
-define('WPRIG_DIR_PATH', plugin_dir_path(__FILE__));
+define('WPRIG_WC_DIR_PATH', plugin_dir_path(__FILE__));
 
 require_once  'main.class.php'; 
 

@@ -5,13 +5,13 @@
  *
  * @since 1.1.0
  */
-function register_block_wprig_postgrid(){
+function register_block_wprig_featured_products(){
 	// Check if the register function exists.
 	if (!function_exists('register_block_type')) {
 		return;
 	}
 	register_block_type(
-		'wprig/postgrid',
+		'wprig-wc/featured-products',
 		array(
 			'attributes' => array(
 				'uniqueId' => array(
@@ -1255,12 +1255,12 @@ function register_block_wprig_postgrid(){
 				// 	'default' => true
 				// ),
 			),
-			'render_callback' => 'render_block_wprig_postgrid'
+			'render_callback' => 'render_block_wprig_featured_products'
 		)
 	);
 }
 
-function wprig_pagination_bar($max_pages, $current_page)
+function wprig_wc_pagination_bar($max_pages, $current_page)
 {
 	if ($max_pages > 1) {
 		$big = 9999999;
@@ -1275,7 +1275,7 @@ function wprig_pagination_bar($max_pages, $current_page)
 	}
 }
 
-function render_block_wprig_postgrid($att)
+function render_block_wprig_featured_products($att)
 {
 	$layout 		        = isset($att['layout']) ? $att['layout'] : 3;
 	$uniqueId 		        = isset($att['uniqueId']) ? $att['uniqueId'] : '';
@@ -1494,7 +1494,7 @@ function render_block_wprig_postgrid($att)
 		$html .= '</div>';
 
 		if($enablePagination ){
-			$html .= '<div class="wprig-postgrid-pagination">' . wprig_pagination_bar($query->max_num_pages, $paged) . '</div>';
+			$html .= '<div class="wprig-postgrid-pagination">' . wprig_wc_pagination_bar($query->max_num_pages, $paged) . '</div>';
 		}
 		$html .= '</div>';
 		wp_reset_postdata();
@@ -1502,5 +1502,5 @@ function render_block_wprig_postgrid($att)
 	return $html;
 }
 
-	add_action('init', 'register_block_wprig_postgrid', 100);
+	add_action('init', 'register_block_wprig_featured_products', 100);
 
