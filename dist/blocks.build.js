@@ -723,7 +723,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         className: "".concat(layout === 1 ? 'wprig-post-list-img' : 'wprig-post-grid-img', " wprig-post-img wprig-post-img-").concat(imageAnimation)
       }, /*#__PURE__*/React.createElement("img", {
         className: "wprig-post-image",
-        src: post.wprig_featured_image_url && post.wprig_featured_image_url[imgSize][0]
+        src: post.image[0] && post.image[0]
       }), showCategory == 'badge' && style !== 4 && /*#__PURE__*/React.createElement("div", {
         className: "wprig-productgrid-cat-position wprig-productgrid-cat-position-".concat(categoryPosition)
       }, /*#__PURE__*/React.createElement("span", {
@@ -768,7 +768,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         dangerouslySetInnerHTML: {
           __html: post.wprig_category
         }
-      })), showTitle && titlePosition == true && title, showTitle && titlePosition == false && title, showExcerpt && /*#__PURE__*/React.createElement("div", {
+      })), showTitle && titlePosition == true && post.title, post.title, showTitle && titlePosition == false && post.title, showExcerpt && /*#__PURE__*/React.createElement("div", {
         className: "wprig-productgrid-intro",
         dangerouslySetInnerHTML: {
           __html: _this.truncate(post.excerpt.rendered, excerptLimit)
@@ -784,7 +784,7 @@ var Edit = /*#__PURE__*/function (_Component) {
       device: 'md',
       spacer: true,
       categoriesList: [],
-      list: [],
+      posts: [],
       loading: true
     };
     _this.wprigContextMenu = createRef();
@@ -840,7 +840,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         path: 'wprig/posts/?count=8&post_type=product&order=DESC&status=all&_locale=user'
       }).then(function (data) {
         _this3.setState({
-          list: data,
+          posts: data,
           loading: false
         });
       });
@@ -860,11 +860,32 @@ var Edit = /*#__PURE__*/function (_Component) {
       return value;
     }
   }, {
+    key: "renderCarouselContent",
+    value: function renderCarouselContent(posts) {
+      var _this4 = this;
+
+      var _this$props$attribute3 = this.props.attributes,
+          layout = _this$props$attribute3.layout,
+          contentPosition = _this$props$attribute3.contentPosition,
+          enableOnSale = _this$props$attribute3.enableOnSale,
+          girdContentPosition = _this$props$attribute3.girdContentPosition,
+          style = _this$props$attribute3.style,
+          showImages = _this$props$attribute3.showImages;
+      return posts.map(function (post) {
+        if (post) {
+          return /*#__PURE__*/React.createElement("div", {
+            className: "wprig-ps-product-carousel ".concat(layout === 1 ? 'wprig-post-list-view' : 'wprig-post-grid-view', " wprig-ps-product-carousel-style-").concat(style)
+          }, /*#__PURE__*/React.createElement("div", {
+            className: "".concat(layout === 1 ? "wprig-post-list-wrapper wprig-post-list-".concat(layout === 2 && style === 3 ? contentPosition : girdContentPosition) : "wprig-post-grid-wrapper wprig-post-grid-".concat(layout === 2 && style === 3 ? contentPosition : girdContentPosition))
+          }, _this4.renderFeaturedImage(post), showImages && post.wprig_featured_image_url && _this4.renderFeaturedImage(post), _this4.renderCardContent(post)));
+        } else return null;
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
           setAttributes = _this$props2.setAttributes,
-          posts = _this$props2.posts,
           name = _this$props2.name,
           clientId = _this$props2.clientId,
           attributes = _this$props2.attributes,
@@ -995,7 +1016,9 @@ var Edit = /*#__PURE__*/function (_Component) {
           hideTablet = _this$props2$attribut.hideTablet,
           hideMobile = _this$props2$attribut.hideMobile,
           globalCss = _this$props2$attribut.globalCss;
-      var device = this.state.device;
+      var _this$state = this.state,
+          device = _this$state.device,
+          posts = _this$state.posts;
       var pages = Math.ceil(wprig_admin.publishedPosts / postsToShow);
       return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(BlockControls, null, /*#__PURE__*/React.createElement(Toolbar, null, /*#__PURE__*/React.createElement(InlineToolbar, _extends({
         data: [{
@@ -1006,7 +1029,19 @@ var Edit = /*#__PURE__*/function (_Component) {
         }]
       }, this.props, {
         prevState: this.state
-      })))), globalSettingsPanel(enablePosition, selectPosition, positionXaxis, positionYaxis, globalZindex, hideTablet, hideMobile, globalCss, setAttributes), /*#__PURE__*/React.createElement("div", null, this.state.loading ? /*#__PURE__*/React.createElement(Spinner, null) : /*#__PURE__*/React.createElement("p", null, "Data is Ready ")));
+      })))), globalSettingsPanel(enablePosition, selectPosition, positionXaxis, positionYaxis, globalZindex, hideTablet, hideMobile, globalCss, setAttributes), /*#__PURE__*/React.createElement("div", null, this.state.loading ? /*#__PURE__*/React.createElement(Spinner, null) : /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement("div", {
+        // onContextMenu={event => handleContextMenu(event, this.wprigContextMenu.current)}
+        className: "wprig-ps-product-carousel-wrapper wprig-ps-product-carousel-layout-".concat(layout, " ").concat(layout === 2 ? 'wprig-ps-product-carousel-column wprig-ps-product-carousel-column-md' + column.md + ' ' + 'wprig-ps-product-carousel-column-sm' + column.sm + ' ' + 'wprig-ps-product-carousel-column-xs' + column.xs : '')
+      }, posts && this.renderCarouselContent(posts)), /*#__PURE__*/React.createElement("div", {
+        ref: this.wprigContextMenu,
+        className: "wprig-context-menu-wraper"
+      }, /*#__PURE__*/React.createElement(ContextMenu, {
+        name: name,
+        clientId: clientId,
+        attributes: attributes,
+        setAttributes: setAttributes,
+        wprigContextMenu: this.wprigContextMenu.current
+      })))));
     }
   }]);
 
