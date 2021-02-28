@@ -643,8 +643,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* eslint-disable react/react-in-jsx-scope */
 var __ = wp.i18n.__;
-var compose = wp.compose.compose; // const { withSelect } = wp.data;
-
+var compose = wp.compose.compose;
+var withSelect = wp.data.withSelect;
 var addQueryArgs = wp.url.addQueryArgs;
 var _wp$element = wp.element,
     Fragment = _wp$element.Fragment,
@@ -858,6 +858,11 @@ var Edit = /*#__PURE__*/function (_Component) {
       }
 
       return value;
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      console.log(this.props);
     }
   }, {
     key: "renderCarouselContent",
@@ -1078,7 +1083,9 @@ var Edit = /*#__PURE__*/function (_Component) {
   return Edit;
 }(Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (compose([withCSSGenerator()])(Edit));
+/* harmony default export */ __webpack_exports__["default"] = (compose([withSelect(function (select, props) {
+  return {};
+}), withCSSGenerator()])(Edit));
 
 /***/ }),
 
@@ -1098,7 +1105,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-registerBlockType('wprig/featured-products', {
+registerBlockType('wprig-wc/featured-products', {
   title: __('Featured Products'),
   description: 'Fetch Products posts and display them beautifully .',
   icon: 'universal-access-alt',
@@ -1107,16 +1114,7 @@ registerBlockType('wprig/featured-products', {
     align: ['center', 'wide', 'full']
   },
   keywords: [__('Product'), __('Featured Product Grid'), __('Grid')],
-  example: {
-    attributes: {
-      layout: 2,
-      column: {
-        md: 1
-      },
-      showExcerpt: false,
-      postsToShow: 1
-    }
-  },
+  example: {},
   edit: _Edit__WEBPACK_IMPORTED_MODULE_1__["default"],
   save: function save(props) {
     return null;
