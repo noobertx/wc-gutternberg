@@ -884,6 +884,8 @@ var Edit = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this5 = this;
+
       var _this$props2 = this.props,
           setAttributes = _this$props2.setAttributes,
           name = _this$props2.name,
@@ -1020,7 +1022,35 @@ var Edit = /*#__PURE__*/function (_Component) {
           device = _this$state.device,
           posts = _this$state.posts;
       var pages = Math.ceil(wprig_admin.publishedPosts / postsToShow);
-      return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(BlockControls, null, /*#__PURE__*/React.createElement(Toolbar, null, /*#__PURE__*/React.createElement(InlineToolbar, _extends({
+      return /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(InspectorControls, {
+        key: "inspector"
+      }, /*#__PURE__*/React.createElement(InspectorTabs, {
+        tabs: ['style', 'advance']
+      }, /*#__PURE__*/React.createElement(InspectorTab, {
+        key: 'style'
+      }, /*#__PURE__*/React.createElement(PanelBody, {
+        initialOpen: false,
+        title: __('Carousel')
+      }, /*#__PURE__*/React.createElement(Range, {
+        label: __('Items'),
+        value: postsToShow,
+        onChange: function onChange(val) {
+          return setAttributes({
+            postsToShow: val
+          });
+        },
+        min: 1,
+        max: 15,
+        responsive: true,
+        device: device,
+        onDeviceChange: function onDeviceChange(value) {
+          return _this5.setState({
+            device: value
+          });
+        }
+      }))), /*#__PURE__*/React.createElement(InspectorTab, {
+        key: 'advance'
+      }, animationSettings(uniqueId, animation, setAttributes)))), /*#__PURE__*/React.createElement(BlockControls, null, /*#__PURE__*/React.createElement(Toolbar, null, /*#__PURE__*/React.createElement(InlineToolbar, _extends({
         data: [{
           name: 'InlineSpacer',
           key: 'spacer',
