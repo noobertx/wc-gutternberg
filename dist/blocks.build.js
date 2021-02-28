@@ -2971,7 +2971,9 @@ var Edit = /*#__PURE__*/function (_Component) {
     _this.state = {
       device: 'md',
       spacer: true,
-      categoriesList: []
+      categoriesList: [],
+      list: [],
+      loading: true
     };
     _this.wprigContextMenu = createRef();
     return _this;
@@ -3014,6 +3016,22 @@ var Edit = /*#__PURE__*/function (_Component) {
           uniqueId: _client
         });
       }
+
+      this.runApiFetch();
+    }
+  }, {
+    key: "runApiFetch",
+    value: function runApiFetch() {
+      var _this3 = this;
+
+      wp.apiFetch({
+        path: 'wprig/posts/?count=8&post_type=product&order=DESC&status=all&_locale=user'
+      }).then(function (data) {
+        _this3.setState({
+          list: data,
+          loading: false
+        });
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -3176,7 +3194,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         }]
       }, this.props, {
         prevState: this.state
-      })))), globalSettingsPanel(enablePosition, selectPosition, positionXaxis, positionYaxis, globalZindex, hideTablet, hideMobile, globalCss, setAttributes));
+      })))), globalSettingsPanel(enablePosition, selectPosition, positionXaxis, positionYaxis, globalZindex, hideTablet, hideMobile, globalCss, setAttributes), /*#__PURE__*/React.createElement("div", null, this.state.loading ? /*#__PURE__*/React.createElement(Spinner, null) : /*#__PURE__*/React.createElement("p", null, "Data is Ready ")));
     }
   }]);
 
