@@ -753,7 +753,9 @@ var Edit = /*#__PURE__*/function (_Component) {
           readmoreSize = _this$props$attribute2.readmoreSize;
       var title = /*#__PURE__*/React.createElement("h3", {
         className: "wprig-productgrid-title"
-      }, /*#__PURE__*/React.createElement("a", null, post.title.rendered));
+      }, /*#__PURE__*/React.createElement("a", null, post.title.rendered)); // console.log(post)
+      // return(<h1>Awesome</h1>)
+
       return /*#__PURE__*/React.createElement("div", {
         className: "".concat(layout === 1 ? 'wprig-post-list-content' : 'wprig-post-grid-content')
       }, showCategory === 'default' && /*#__PURE__*/React.createElement("span", {
@@ -771,7 +773,7 @@ var Edit = /*#__PURE__*/function (_Component) {
       })), showTitle && titlePosition == true && post.title, post.title, showTitle && titlePosition == false && post.title, showExcerpt && /*#__PURE__*/React.createElement("div", {
         className: "wprig-productgrid-intro",
         dangerouslySetInnerHTML: {
-          __html: _this.truncate(post.excerpt.rendered, excerptLimit)
+          __html: _this.truncate(post.excerpt_full, excerptLimit)
         }
       }), showReadMore && /*#__PURE__*/React.createElement("div", {
         className: "wprig-productgrid-btn-wrapper"
@@ -876,6 +878,7 @@ var Edit = /*#__PURE__*/function (_Component) {
           girdContentPosition = _this$props$attribute3.girdContentPosition,
           style = _this$props$attribute3.style,
           showImages = _this$props$attribute3.showImages;
+      console.log(posts);
       return posts.map(function (post) {
         if (post) {
           return /*#__PURE__*/React.createElement("div", {
