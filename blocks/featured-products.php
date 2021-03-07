@@ -400,7 +400,15 @@ function register_block_wprig_featured_products(){
 					],
 				),
 
-
+				//Carousel 
+				'carouselItems' => [
+                        'type' => 'object',
+                        'default' => [
+                            'md' => 3,
+                            'sm' => 2,
+                            'xs' => 1,
+                        ]
+                    ],
 				//card
 				'cardBackground' => array(
 					'type' => 'object',

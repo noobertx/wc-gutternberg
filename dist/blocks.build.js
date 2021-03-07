@@ -862,13 +862,23 @@ var Edit = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps, prevState) {
+      var _this$props2 = this.props,
+          clientId = _this$props2.clientId,
+          className = _this$props2.className,
+          carouselItems = _this$props2.attributes.carouselItems; // console.log(carouselItems,prevProps.attributes.carouselItems)
+
+      if (prevProps.attributes.carouselItems.md != carouselItems.md) {
+        this.setState({
+          posts: [],
+          loading: true
+        });
+        this.runApiFetch(); // jQuery("#block-"+clientId).find(".wprig-ps-product-carousel-wrapper").slick("reinit").slick({slidesToShow :parseInt(carouselItems.md) })
+      }
+
       if (this.state.posts.length && prevState.posts != this.state.posts) {
-        var _this$props2 = this.props,
-            clientId = _this$props2.clientId,
-            className = _this$props2.className;
-        console.log(this.state, prevState);
-        console.log('jQuery("#block-' + clientId + ').find(".wprig-ps-product-carousel-wrapper").slick()');
-        jQuery("#block-" + clientId).find(".wprig-ps-product-carousel-wrapper").slick();
+        jQuery("#block-" + clientId).find(".wprig-ps-product-carousel-wrapper").slick({
+          slidesToShow: parseInt(carouselItems.md)
+        });
       }
     }
   }, {
@@ -1015,6 +1025,7 @@ var Edit = /*#__PURE__*/function (_Component) {
           overlayHeight = _this$props3$attribut.overlayHeight,
           overlaySpace = _this$props3$attribut.overlaySpace,
           overlayBorderRadius = _this$props3$attribut.overlayBorderRadius,
+          carouselItems = _this$props3$attribut.carouselItems,
           columnGap = _this$props3$attribut.columnGap,
           contentPadding = _this$props3$attribut.contentPadding,
           titleSpace = _this$props3$attribut.titleSpace,
@@ -1045,10 +1056,10 @@ var Edit = /*#__PURE__*/function (_Component) {
         title: __('Carousel')
       }, /*#__PURE__*/React.createElement(Range, {
         label: __('Items'),
-        value: postsToShow,
+        value: carouselItems,
         onChange: function onChange(val) {
           return setAttributes({
-            postsToShow: val
+            carouselItems: val
           });
         },
         min: 1,
