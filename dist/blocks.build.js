@@ -875,10 +875,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         this.runApiFetch(); // jQuery("#block-"+clientId).find(".wprig-ps-product-carousel-wrapper").slick("reinit").slick({slidesToShow :parseInt(carouselItems.md) })
       }
 
-      if (this.state.posts.length && prevState.posts != this.state.posts) {
-        jQuery("#block-" + clientId).find(".wprig-ps-product-carousel-wrapper").slick({
-          slidesToShow: parseInt(carouselItems.md)
-        });
+      if (this.state.posts.length && prevState.posts != this.state.posts) {// jQuery("#block-"+clientId).find(".wprig-ps-product-carousel-wrapper").slick({slidesToShow : parseInt(carouselItems.md) })
       }
     }
   }, {
